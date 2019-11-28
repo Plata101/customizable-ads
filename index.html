@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<!-- Copyright:    ** Mediakanzlei, Heinrichstrasse 269, 8005 Zurich, Switzerland **
+     Licensed for: ** Sunrise Communications AG, Binzmühlestrasse 130, 8050 Zurich, Switzerland **
+-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>300x600</title>
+  <meta name="ad.size" content="width=300,height=600" />
+  <script type="text/javascript" src="adjust.js"></script>
+  <style type="text/css" media="screen">
+    * {
+      font-family: 'Open Sans', Arial;
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+
+    #container {
+      position: relative;
+      width: 300px;
+      height: 600px;
+      transition: opacity 0.3s;
+      overflow: hidden;
+      background: linear-gradient(50deg, #ffc805, #faa600, #e6003c, #aa1937);
+      background-size: 150% 150%;
+      border-radius: 12px;
+      padding-top: 15px;
+      -webkit-animation: backgroundAnimation 15s ease;
+      -moz-animation: backgroundAnimation 15s ease;
+      animation: backgroundAnimation 15s ease;
+      animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes backgroundAnimation {
+      0% {
+        background-position: 97% 0%
+      }
+      50% {
+        background-position: 4% 100%
+      }
+      100% {
+        background-position: 97% 0%
+      }
+    }
+
+    @-moz-keyframes backgroundAnimation {
+      0% {
+        background-position: 97% 0%
+      }
+      50% {
+        background-position: 4% 100%
+      }
+      100% {
+        background-position: 97% 0%
+      }
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        background-position: 97% 0%
+      }
+      50% {
+        background-position: 4% 100%
+      }
+      100% {
+        background-position: 97% 0%
+      }
+    }
+
+    #container:hover #cta {
+      -webkit-animation-name: cta;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: .5s;
+      /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: 50;
+      -webkit-animation-timing-function: ease;
+      animation-name: cta;
+      animation-duration: .5s;
+      animation-iteration-count: 50;
+      animation-timing-function: ease;
+      transform-origin: center center;
+    }
+
+    #container:hover {
+      cursor: pointer;
+    }
+
+    ul {
+      position: relative;
+      margin: 0px;
+      padding: 0px;
+      width: 270px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      margin-top: 25px;
+    }
+
+    li {
+      width: 76px;
+      height: 70px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-size: 30px;
+      list-style-type: none;
+      border-radius: 7px;
+      margin: 3px;
+      color: #FFF;
+    }
+
+    a:link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    p {
+      font-size: 20px;
+      max-width: 200px;
+      color: #000;
+    }
+
+    #offer {
+      width: 270px;
+      font-size: 20px;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    h5 {
+      position: relative;
+      font-weight: normal;
+      color: white;
+      font-size: 12px;
+      top: -3px;
+    }
+
+    tbody {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 210px;
+      height: 72px;
+      transition: transform .3s linear;
+      padding-bottom: 80px;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      font-smoothing: antialiased;
+    }
+
+    #container:hover #shiny {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+      background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+      /* IE6-9 fallback on horizontal gradient */
+      filter: blur(10px);
+      transform: rotate(30deg);
+      animation-name: shiny;
+      animation-duration: .4s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    #shiny {
+      opacity: 1;
+      position: absolute;
+      width: 300px;
+      height: 1200px;
+      left: -300px;
+      top: -300px;
+    }
+
+    @keyframes shiny {
+      0% {
+        transform: rotate(30deg)
+      }
+      100% {
+        transform: translateX(1000px) rotate(30deg)
+      }
+    }
+
+    @-webkit-keyframes shiny {
+      0% {
+        transform: rotate(30deg)
+      }
+      100% {
+        transform: translateX(1000px) rotate(30deg)
+      }
+    }
+
+    @-moz-keyframes shiny {
+      0% {
+        transform: rotate(30deg)
+      }
+      100% {
+        transform: translateX(1000px) rotate(30deg)
+      }
+    }
+
+    .aside {
+      transform: scale(0);
+      transition: transform 1s;
+      transition-delay: 1s;
+    }
+
+    #aside_top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 270px;
+      height: 343px;
+      background: #FFF;
+      border-radius: 12px;
+      margin-left: 13.5px;
+      transform-origin: center center;
+    }
+
+    #aside_bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 270px;
+      height: 162px;
+      background: #FFF;
+      border-radius: 12px;
+      margin-top: 15px;
+      margin-left: 13px;
+      transition-delay: 1.5s;
+    }
+
+    #product {
+      width: 197px;
+      height: 197px;
+      margin: 20px 17px;
+      margin-bottom: 75px;
+      background-size: contain, cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      float: left;
+      transition: transform .3s linear;
+    }
+
+    #logo {
+      position: absolute;
+      height: 13px;
+      width: 60px;
+      top: 30px;
+      left: 210px;
+      opacity: 0;
+      transition: opacity 1s;
+      transition-delay: 2.3s;
+    }
+
+    #hours,
+    #minutes,
+    #seconds,
+    #offer {
+      transition: opacity 1.5s;
+    }
+
+    #hours,
+    #minutes,
+    #seconds {
+      font-weight: bold;
+    }
+
+    #cta-container {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 217px;
+      top: 553px;
+      left: 40px;
+    }
+
+    #cta {
+      position: relative;
+      opacity: 0;
+      transition: opacity 1s;
+      transition-delay: 2.6s;
+      color: #FFFFFF;
+      width: auto;
+      font-size: 20px;
+      letter-spacing: 0.7px;
+      margin-left: 2.5px;
+      top: 0px;
+    }
+
+    /* Safari 4.0 - 8.0 */
+
+    @-webkit-keyframes cta {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    /* Standard syntax */
+
+    @keyframes cta {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    #bracket {
+      position: relative;
+      opacity: 0;
+      transition: opacity 1s;
+      transition-delay: 2.6s;
+      top: 4.5px;
+      height: 18px;
+      margin-right: 2.5px;
+    }
+
+    #sandclock {
+      position: relative;
+      height: 50px;
+      width: auto;
+      top: -3px;
+      margin-bottom: 10px;
+    }
+
+    #fader {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 600px;
+      top: 0;
+      border-radius: 12px;
+      transition: opacity 1s;
+      transition-timing-function: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+
+    #fade-logo {
+      height: 40px;
+      width: 157px;
+      transform: scale(0.8);
+      transition: transform .5s;
+    }
+
+    #offer_valid {
+      position: absolute;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 270px;
+      height: 163px;
+      opacity: 0;
+      font-weight: normal;
+      padding: 35px;
+      text-align: center;
+      font-size: 20px;
+      bottom: 44px;
+      left: -27px;
+      transition: opacity 1.5s;
+      transition-delay: 1.2s;
+      line-height: 25px;
+    }
+
+    /* mediaquery for IE11 */
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+      #bracket {
+        transform: translateY(-1.5px);
+      }
+      #offer_valid {
+        width: 270px;
+        left: -25px;
+        text-align: center;
+      }
+      #product {
+        margin-bottom: 0px;
+      }
+      #container:hover #shiny {
+        animation-name: none;
+        display: none;
+      }
+      #container {
+        overflow: visible;
+      }
+      #sandclock {
+        height: 40px;
+        width: 35.5px;
+        top: 3px;
+      }
+      #cta {
+        top: 1px;
+      }
+    }
+
+    /* mediaquery for Edge */
+
+    @supports (-ms-ime-align:auto) {
+      #product {
+        margin-bottom: 0px;
+      }
+      #sandclock {
+        height: 40px;
+        width: 35.5px;
+        top: 3px;
+      }
+      tbody {
+        padding-bottom: 0px;
+        top: 20px;
+      }
+      #cta {
+        top: 2px;
+      }
+    }
+
+    /* mediaquery for Safari */
+
+    @media not all and (min-resolution:.001dpcm) {
+      @media {
+        #cta {
+          top: 1.5px;
+        }
+      }
+    }
+
+    /* mediaquery for Firefox */
+
+    @-moz-document url-prefix() {
+      #sandclock {
+        height: 40px;
+      }
+      #cta {
+        position: relative;
+        top: 1px;
+      }
+      li {
+        padding-bottom: 7px;
+      }
+      h5 {
+        margin-bottom: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body onload="fader()">
+  <a id="link" href="">
+    <div id="container" class="container">
+      <aside class="aside" id="aside_top">
+        <div id="product"></div>
+      </aside>
+      <img id="logo" src="logo.svg" />
+      <aside class="aside" id="aside_bottom">
+        <h4 id="offer">Angebot gültig bis:</h4>
+        <ul>
+          <li id="hours"></li>
+          <li id="minutes"></li>
+          <li id="seconds"></li>
+        </ul>
+      </aside>
+      <div id="cta-container">
+        <img id="bracket" src="bracket.svg" />
+        <h4 id="cta"></h4>
+        <h4 id="offer_valid"></h4>
+      </div>
+      <div id="fader"><img id="fade-logo" src="logo_fader.svg" /></div>
+      <div id="shiny"></div>
+    </div>
+  </a>
+</body>
+<script>
+  // Detect browsers that dont render GIFs properly
+  var picType = "gif";
+  if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 || !!window.MSInputMethodContext && !!document.documentMode || /Edge/.test(navigator.userAgent)) {
+    var picType = "svg";
+  }
+
+  // Read JS-Adjust File
+
+  var product = document.getElementById('product');
+  var local_data = data;
+  var row_data = '';
+  for (var i = 0; i < local_data.length; i++) {
+    var row_data = row_data +
+      // Define Tagline
+      '<p id="tagline">' + local_data[i].tagline + '</p>';
+    // Define Background Picture
+    product.style.backgroundImage = "url('" + local_data[i].bild_pfad + "')";
+    // Define Countdown Date
+    var datum = local_data[i].datum;
+    // Check bold input
+    var str = local_data[i].tagline;
+    // Add CTA to variable
+    var cta = local_data[i].cta;
+    // Add Offer Valid to variable
+    var offer_valid = local_data[i].offer_valid;
+    // Add URL to Ad
+    var url = local_data[i].url
+  }
+  // Add Input to div
+  var content_element = document.createElement('tbody');
+  content_element.innerHTML = row_data;
+
+  document.getElementById('aside_top').appendChild(content_element);
+  document.getElementById('aside_top').appendChild(content_element);
+  document.getElementById('cta').innerHTML = cta;
+  document.getElementById('offer_valid').innerHTML = "<img id='sandclock' src='sandclock." + picType + "' />" + "<b>Angebot gültig bis: </b>" + offer_valid;
+  document.getElementById('link').href = url;
+
+  //check for bold font input
+
+  var str = local_data[0].tagline;
+  console.log(str);
+
+  String.prototype.replaceAt = function(index, character) {
+    return this.substr(0, index) + character + this.substr(index + 1);
+  }
+  var pos = [];
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] === "*") {
+      var index = i;
+      var boldChar = '';
+      if (count % 2 == 0) {
+        boldChar = "<strong>"
+      } else {
+        boldChar = "</strong>";
+      }
+      count++;
+      str = str.replaceAt(index, boldChar);
+      i += boldChar.length - 1; // correct position to account for the replacement
+    }
+  }
+  document.getElementById("tagline").innerHTML = str;
+
+  // Time Counter
+
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60;
+
+  var t = new Date();
+  t.setSeconds(t.getSeconds() + 30);
+
+  let countDown = new Date(datum).getTime(),
+    x = setInterval(function() {
+
+      let now = new Date().getTime(),
+        distance = countDown - now;
+
+      document.getElementById('hours').innerHTML = Math.floor(distance / (hour)) + "<br><h5 class=\"countdown-text\">Stunden</h5>",
+        document.getElementById('minutes').innerHTML = Math.floor((distance % (hour)) / (minute)) + "<br><h5 class=\"countdown-text\">Minuten</h5>",
+        document.getElementById('seconds').innerHTML = Math.floor((distance % (minute)) / second) + "<br><h5 class=\"countdown-text\">Sekunden</h5>";
+
+      // after t-seconds, stop animation
+      if (now >= t) {
+        clearInterval(x);
+        document.getElementById('hours').style.opacity = "0",
+          document.getElementById('minutes').style.opacity = "0",
+          document.getElementById('seconds').style.opacity = "0",
+          document.getElementById('offer').style.opacity = "0",
+          document.getElementById('offer_valid').style.opacity = "1";
+      }
+    }, second)
+
+  // Fader start
+  function fader() {
+    document.getElementById('fader').style.opacity = "0";
+    document.getElementById('fade-logo').style.transform = "scale(1)";
+    document.getElementById('aside_top').style.transform = "scale(0.99)";
+    document.getElementById('aside_bottom').style.transform = "scale(0.99)";
+    document.getElementById('cta').style.opacity = "1";
+    document.getElementById('bracket').style.opacity = "1";
+    document.getElementById('logo').style.opacity = "1";
+  }
+</script>
+
+</html>
